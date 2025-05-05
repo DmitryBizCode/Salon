@@ -12,8 +12,8 @@ $tab = $_GET['tab'] ?? 'clients';
     <?php
     switch ($tab) {
         case 'clients':
-                include __DIR__ . '/clients.php';
-                break;
+            include __DIR__ . '/clients.php';
+            break;
         case 'services':
             include __DIR__ . '/services.php';
             break;
@@ -24,7 +24,7 @@ $tab = $_GET['tab'] ?? 'clients';
             include __DIR__ . '/workers.php';
             break;
         default:
-            include __DIR__ . '/clients.php';
+            include __DIR__ . '/add_appointment.php';
             break;
     }
     ?>

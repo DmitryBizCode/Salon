@@ -320,3 +320,253 @@ body {
 .service-price {
     color: gray;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.login-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: rgba(173, 216, 230, 0.2);
+    border: none;
+    border-radius: 10px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    background: rgba(255, 192, 203, 0.6);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.alert {
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.tabs {
+    display: flex;
+    background: #f0f0f0;
+}
+
+.tabs a {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.tabs a.active {
+    color: #fff;
+    background: rgba(255, 192, 203, 1);
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.clients-container,
+.services-container,
+.workers-container {
+    padding: 20px;
+    background: rgba(255, 192, 203, 0.1);
+}
+
+.clients-container h1,
+.services-container h1,
+.workers-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.client-list,
+.service-list,
+.worker-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.client-card,
+.service-item,
+.worker-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(255, 192, 203, 0.1);
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.client-card a,
+.worker-card a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.client-card img,
+.worker-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* appointments.css */
+.appointments-container {
+    padding: 20px;
+    background-color: rgba(255, 192, 203, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.appointment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.appointment-item {
+    padding: 15px;
+    background-color: rgba(255, 192, 203, 0.2);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button, .button {
+    padding: 15px;
+    background-color: #ff6f61; /* Рожевий відтінок */
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+button:hover, .button:hover {
+    background-color: #ff4d42; /* Темніший рожевий при ховері */
+}
+/* Загальний стиль для форми */
+.add-appointment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 192, 203, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-appointment-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 192, 203, 0.1);
+    font-size: 1rem;
+}
+
+input[type="text"], input[type="date"] {
+    font-size: 1rem;
+}
+
+input[type="checkbox"], select {
+    width: auto;
+}
+
+input[type="checkbox"] + label {
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: rgba(255, 192, 203, 0.6);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 192, 203, 1);
+}
+
+button:active {
+    background-color: rgba(255, 192, 203, 0.8);
+}
+
+a.button {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #ccc;
+    color: #333;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+a.button:hover {
+    background-color: #aaa;
+}
+
+/* Стиль для загальної вартості */
+p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Стилі для загальної вартості */
+#totalCost {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

@@ -1,6 +1,12 @@
-CREATE TABLE IF NOT EXISTS countries (
-    country_id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(50) NOT NULL UNIQUE,
-    interest_tax FLOAT NOT NULL,
-    PRIMARY KEY (country_id)
-    );
+CREATE DATABASE IF NOT EXISTS salon;
+USE salon;
+
+CREATE TABLE IF NOT EXISTS appointments (
+    id CHAR(36) NOT NULL PRIMARY KEY,
+    client_name VARCHAR(255) NOT NULL,
+    service TEXT NOT NULL,
+    date DATE NOT NULL,
+    time VARCHAR(5) NOT NULL,
+    total_cost DECIMAL(10, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)

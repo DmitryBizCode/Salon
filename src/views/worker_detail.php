@@ -11,5 +11,5 @@ if (!$worker) { echo '<p>Працівника не знайдено</p>'; exit; 
     <h1><?=$worker['name']?></h1>
     <p><?=$worker['position']?></p>
     <p><?=$worker['details']?></p>
-    <a href="index.php?tab=workers" class="back-button">Назад до списку працівників</a>
+    <a href="/index.php?tab=workers" class="back-button">Назад до списку працівників</a>
 </div>

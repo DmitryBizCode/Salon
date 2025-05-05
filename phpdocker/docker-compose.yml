@@ -21,7 +21,7 @@ services:
         container_name: my-mysql
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_DATABASE: container
+            MYSQL_DATABASE: salon
             MYSQL_USER: user
             MYSQL_PASSWORD: 12345
             MYSQL_SSL_CA: ""
