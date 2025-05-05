@@ -1,5 +1,4 @@
 <?php
-session_start();
 $servicesWithPrices = [
     "Стрижка" => 700,
     "Фарбування класичне" => 500,

@@ -65,14 +65,14 @@ body {
     padding: 20px;
 }
 
-.client-card {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background: rgba(255, 192, 203, 0.1);
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
+/*.client-card {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    padding: 15px;*/
+/*    background: rgba(255, 192, 203, 0.1);*/
+/*    margin-bottom: 10px;*/
+/*    border-radius: 8px;*/
+/*}*/
 
 .client-card a {
     display: flex;
@@ -101,12 +101,12 @@ body {
     color: gray;
 }
 
-/* Client Detail Styles */
-.client-detail {
-    padding: 20px;
-    background: rgba(255, 192, 203, 0.1);
-    text-align: center;
-}
+/*!* Client Detail Styles *!*/
+/*.client-detail {*/
+/*    padding: 20px;*/
+/*    background: rgba(255, 192, 203, 0.1);*/
+/*    text-align: center;*/
+/*}*/
 
 .client-detail img {
     width: 150px;
@@ -202,10 +202,10 @@ body {
     padding: 20px;
 }
 
-.clients-container {
-    padding: 20px;
-    background: rgba(255, 192, 203, 0.1);
-}
+/*.clients-container {*/
+/*    padding: 20px;*/
+/*    background: rgba(255, 192, 203, 0.1);*/
+/*}*/
 
 .clients-container h1 {
     font-size: 2rem;
@@ -218,14 +218,14 @@ body {
     margin: 0;
 }
 
-.client-card {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    background: rgba(255, 192, 203, 0.1);
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
+/*.client-card {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    padding: 15px;*/
+/*    background: rgba(255, 192, 203, 0.1);*/
+/*    margin-bottom: 10px;*/
+/*    border-radius: 8px;*/
+/*}*/
 
 .client-card a {
     display: flex;
@@ -254,11 +254,11 @@ body {
     color: gray;
 }
 
-.client-detail {
-    padding: 20px;
-    background: rgba(255, 192, 203, 0.1);
-    text-align: center;
-}
+/*.client-detail {*/
+/*    padding: 20px;*/
+/*    background: rgba(255, 192, 203, 0.1);*/
+/*    text-align: center;*/
+/*}*/
 
 .client-detail img {
     width: 150px;
@@ -387,12 +387,12 @@ body {
     padding: 20px;
 }
 
-.clients-container,
-.services-container,
-.workers-container {
-    padding: 20px;
-    background: rgba(255, 192, 203, 0.1);
-}
+/*.clients-container,*/
+/*.services-container,*/
+/*.workers-container {*/
+/*    padding: 20px;*/
+/*    background: rgba(255, 192, 203, 0.1);*/
+/*}*/
 
 .clients-container h1,
 .services-container h1,
@@ -409,17 +409,17 @@ body {
     margin: 0;
 }
 
-.client-card,
-.service-item,
-.worker-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    background: rgba(255, 192, 203, 0.1);
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
+/*.client-card,*/
+/*.service-item,*/
+/*.worker-card {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-between;*/
+/*    padding: 15px;*/
+/*    background: rgba(255, 192, 203, 0.1);*/
+/*    margin-bottom: 10px;*/
+/*    border-radius: 8px;*/
+/*}*/
 
 .client-card a,
 .worker-card a {
@@ -569,4 +569,470 @@ p {
     color: #333;
     font-size: 1.2rem;
     font-weight: bold;
+}
+/* Основний стиль контейнера */
+.container {
+    display: flex;
+    height: 120vh;
+}
+
+/* Стиль для лівої панелі */
+.sidebar {
+    width: 300px;
+    background-color: #F5D2D8;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 2px solid #e1e1e1;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.client-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.client-card {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.client-card:hover {
+    background-color: #F4B8C1;
+}
+
+.client-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.client-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.client-info p {
+    margin: 0;
+    color: #666;
+}
+
+/* Стиль для основного контенту */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #FFF;
+}
+
+.client-detail {
+    text-align: center;
+}
+
+.client-detail .client-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.client-detail h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.client-detail p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F5D2D8;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #F4B8C1;
+}
+
+.worker-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.worker-card {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.worker-card:hover {
+    background-color: #F4B8C1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.worker-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.worker-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.worker-info p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Стиль для основного контенту */
+.main-content {
+    flex: 1;
+    padding: 40px 20px;
+    background-color: #FFF;
+    overflow-y: auto;
+}
+
+.worker-detail {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.worker-detail img {
+    width: 180px; /* Встановлюємо точний розмір */
+    height: 180px; /* Встановлюємо точний розмір */
+    border-radius: 50%; /* Округляємо фото */
+    margin-bottom: 20px; /* Відступ знизу */
+    border: 4px solid #F4B8C1; /* Легкий бордер кольору основної теми */
+    object-fit: cover; /* Збереження пропорцій та покриття всього фото */
+}
+
+.worker-detail h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.worker-detail p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.worker-detail .position {
+    font-style: italic;
+    color: #999;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F5D2D8;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    background-color: #F4B8C1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Для мобільних */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .worker-detail {
+        max-width: 100%;
+    }
+}
+/* Контейнер для сторінки клієнтів */
+.container {
+    display: flex;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh; /* Забезпечує, що контейнер займе всю висоту */
+}
+
+/* Ліва панель зі списком клієнтів */
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #F4B8C1;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.client-list {
+    list-style: none;
+    padding: 0;
+}
+
+.client-card {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.client-card:hover {
+    background-color: #F5D2D8;
+}
+
+.client-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.client-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.client-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Основний контент з детальною інформацією */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.client-detail {
+    text-align: center;
+    max-width: 700px;
+    margin-top: -400px;
+}
+
+.client-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 4px solid #F4B8C1;
+}
+
+.client-detail h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.client-detail p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F5D2D8;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    background-color: #F4B8C1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.worker-list {
+    list-style: none;
+    padding: 0;
+}
+
+.worker-card {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.worker-card:hover {
+    background-color: #F5D2D8;
+}
+
+.worker-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.worker-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.worker-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Основний контент з детальною інформацією */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    margin-left: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Декоративна фото і текст */
+.worker-detail {
+    text-align: center;
+    max-width: 700px;
+    /*margin: 0 auto;*/
+    margin-top: -400px;
+}
+
+.worker-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 4px solid #F4B8C1;
+}
+
+.worker-detail h1 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.worker-detail p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F5D2D8;
+    color: #333;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    background-color: #F4B8C1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Для мобільних пристроїв */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .worker-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .worker-photo {
+        width: 150px;
+        height: 150px;
+    }
 }

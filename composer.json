@@ -7,8 +7,8 @@
     },
     "authors": [
         {
-            "name": "Dmitry Beznosiuk",
-            "email": "Dmitrybeznosiukcode@gmail.com"
+            "name": "Lera Kundrat",
+            "email": "LeraKundrat@gmail.com"
         }
     ],
     "require-dev": {
@@ -23,6 +23,7 @@
         "ext-pdo": "*",
         "ext-mysqli": "*",
         "symfony/console": "^7.1",
-        "phpmailer/phpmailer": "^6.9"
+        "phpmailer/phpmailer": "^6.9",
+      "ext-json": "*"
     }
 }

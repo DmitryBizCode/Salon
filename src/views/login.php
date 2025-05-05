@@ -1,5 +1,4 @@
 <?php
-session_start();
 $error = false;
 $username = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

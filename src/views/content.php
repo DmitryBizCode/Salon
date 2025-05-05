@@ -1,5 +1,4 @@
 <?php
-session_start();
 $tab = $_GET['tab'] ?? 'clients';
 ?>
 <div class="tabs">

@@ -47,35 +47,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $totalCost -= $totalCost * ($discount / 100);
 
     // Вставка нового запису в базу даних
-    $stmt = $pdo->prepare("INSERT INTO appointments (client_name, service, date, time, total_cost) VALUES (?, ?, ?, ?, ?)");
-    $stmt->execute([$clientName, implode(", ", $selectedServices), $date, $time, $totalCost]);
+    $stmt = $pdo->prepare("INSERT INTO appointments (client_name, service, date, time, total_cost) 
+                           VALUES (:client_name, :service, :date, :time, :total_cost)");
 
-//    // Перенаправлення на сторінку записів після збереження
-//    header('Location: /index.php?tab=appointments');
-//    exit();
+    // Параметри для вставки
+    $params = [
+        ':client_name' => $clientName,
+        ':service' => implode(", ", $selectedServices),  // Об'єднуємо вибрані послуги в рядок
+        ':date' => $date,
+        ':time' => $time,
+        ':total_cost' => $totalCost
+    ];
+
+    $stmt->execute($params);  // Передаємо параметри для виконання запиту
+
+    // Перенаправлення на сторінку записів після збереження
+    header('Location: /index.php?tab=appointments');
+    exit();
 }
 ?>
-
+<link rel="stylesheet" href="/assets/css/style.css">
 <div class="add-appointment-container">
     <h1>Додати новий запис</h1>
 
     <form method="POST" action="add_appointment.php">
-        <!-- Дані клієнта -->
+        <!-- Client Name -->
         <label for="client_name">Ім'я клієнта</label>
         <input type="text" id="client_name" name="client_name" required>
 
-        <!-- Оберіть послуги -->
+        <!-- Services -->
         <label for="services">Оберіть послуги</label><br>
         <?php foreach ($servicesWithPrices as $service => $price): ?>
             <input type="checkbox" name="services[]" value="<?= $service ?>" id="<?= $service ?>">
             <label for="<?= $service ?>"><?= $service ?> - ₴<?= number_format($price, 2) ?></label><br>
         <?php endforeach; ?>
 
-        <!-- Дата -->
+        <!-- Date -->
         <label for="date">Дата</label>
         <input type="date" id="date" name="date" required>
 
-        <!-- Час -->
+        <!-- Time -->
         <label for="time">Час</label>
         <select id="time" name="time" required>
             <?php foreach ($availableTimes as $timeOption): ?>
@@ -83,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endforeach; ?>
         </select>
 
-        <!-- Знижка -->
+        <!-- Discount -->
         <label for="discount">Знижка (%)</label>
         <select id="discount" name="discount">
             <option value="0">0%</option>
@@ -92,16 +103,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <option value="15">15%</option>
         </select>
 
-        <!-- Загальна вартість -->
+        <!-- Total cost display -->
         <p>Загальна вартість: ₴<span id="totalCost">0.00</span></p>
 
+        <!-- Submit button -->
         <button type="submit">Зберегти</button>
+
+        <!-- Back button -->
         <a href="/index.php?tab=appointments" class="button">Назад до записів</a>
     </form>
 </div>
 
 <script>
-    // Обчислення загальної вартості на клієнтській стороні
+    // Calculate total cost on client-side
     const services = <?= json_encode($servicesWithPrices) ?>;
     const form = document.querySelector('form');
     const totalCostSpan = document.getElementById('totalCost');
