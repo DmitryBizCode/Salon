@@ -1036,3 +1036,7 @@ p {
         height: 150px;
     }
 }
+/* Sidebar styling */
+.sidebar {
+    overflow-y: auto; /* Enable vertical scroll */
+}
